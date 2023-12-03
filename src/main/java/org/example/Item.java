@@ -20,6 +20,7 @@ public class Item {
         this.uniqueID = uniqueID;
         this.isBorrowed = false;
     }
+
     public String getTitle() {
         return title;
     }
@@ -31,3 +32,13 @@ public class Item {
     public boolean isBorrowed() {
         return isBorrowed;
     }
+
+    public void borrowItem() {
+        isBorrowed = true;
+    }
+
+    public void returnItem() {
+        isBorrowed = false;
+    }
+
+}

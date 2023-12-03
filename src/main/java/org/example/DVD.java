@@ -18,4 +18,8 @@ class DVD extends Item {
     public int getDuration() {
         return duration;
     }
+    @Override
+    public String toString() {
+        return "DVD: " + getTitle() + "  " + getUniqueID() + "  " + duration + "hv.";
+    }
 }

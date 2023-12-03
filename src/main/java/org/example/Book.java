@@ -19,4 +19,9 @@ class Book extends Item {
         public String getAuthor() {
         return author;
     }
+
+    @Override
+    public String toString() {
+        return "Book: " + getTitle() + "  " + getUniqueID() + "  " + getAuthor();
+    }
 }

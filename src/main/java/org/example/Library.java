@@ -1,4 +1,6 @@
 package org.example;
+import java.util.List;
+import java.util.ArrayList;
 /*
 Library (implements IManageable)
 Attributes:
