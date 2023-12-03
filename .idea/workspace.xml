@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0665fbca-0811-4d50-ba83-b40ca82a6bc5" name="Changes" comment="create menu2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+    <list default="true" id="0665fbca-0811-4d50-ba83-b40ca82a6bc5" name="Changes" comment="create Book, DVD&#10;Item">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/IManageable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Patron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +18,13 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,13 +79,22 @@
       <option name="project" value="LOCAL" />
       <updated>1701614837130</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create Book, DVD&#10;Item">
+      <option name="closed" value="true" />
+      <created>1701615266715</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701615266715</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First" />
     <MESSAGE value="create menu" />
     <MESSAGE value="create menu2" />
-    <option name="LAST_COMMIT_MESSAGE" value="create menu2" />
+    <MESSAGE value="create Book, DVD&#10;Item" />
+    <option name="LAST_COMMIT_MESSAGE" value="create Book, DVD&#10;Item" />
   </component>
 </project>
