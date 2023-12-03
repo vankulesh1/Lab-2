@@ -20,7 +20,7 @@ public class Main {
             System.out.println("------------------------------------------------------------");
 
             int number = scanner.nextInt();
-            scanner.nextLine(); // Очистка буфера
+            scanner.nextLine();
             switch (number) {
                 case 1:
                     addItemToLibrary(library, scanner);
@@ -198,7 +198,6 @@ public class Main {
         return null;
     }
 
-
     private static void returnItemToLibrary(Library library, Scanner scanner) {
         System.out.println("------------------------------------------------------------");
         System.out.println("Введіть унікальний ID читача, який повертає предмет:");
@@ -215,20 +214,7 @@ public class Main {
 
             Item itemToReturn = findItemByID(library, itemID);
 
-            if (itemToReturn != null && patron.hasBorrowedItem(itemToReturn)) {
-                library.returnItem(patron, itemToReturn);
-                System.out.println("------------------------------------------------------------");
-                System.out.println("Предмет повернено у бібліотеку.");
-                System.out.println("------------------------------------------------------------");
-            } else if (itemToReturn == null) {
-                System.out.println("------------------------------------------------------------");
-                System.out.println("Предмет з унікальним ID " + itemID + " не знайдено в бібліотеці.");
-                System.out.println("------------------------------------------------------------");
-            } else {
-                System.out.println("------------------------------------------------------------");
-                System.out.println("Читач " + patron.getName() + " не брав цей предмет з бібліотеки.");
-                System.out.println("------------------------------------------------------------");
-            }
+           library.returnItemToLibrary(patron, itemToReturn);
         } else {
             System.out.println("------------------------------------------------------------");
             System.out.println("Читача з унікальним ID " + patronID + " не знайдено в бібліотеці.");
