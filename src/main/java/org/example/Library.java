@@ -67,13 +67,42 @@ class Library implements IManageable {
     }
 
     public void returnItem(Patron patron, Item item) {
-        if (patron.getBorrowedItems().contains(item)) {
-            item.returnItem();
-            patron.returnItem(item);
+        // Перевірка, чи бібліотека містить переданий предмет
+        if (items.contains(item)) {
+            // Перевірка, чи читач дійсно має цей предмет
+            if (patron.hasBorrowedItem(item)) {
+                // Відзначаємо предмет як непозичений
+                item.returnItem();
+                // Видаляємо предмет із списку позичених у читача
+                patron.returnItem(item);
+                System.out.println("------------------------------------------------------------");
+                System.out.println("Предмет з ID " + item.getUniqueID() + " повернено до бібліотеку.");
+                System.out.println("------------------------------------------------------------");
+                        } else {
+                System.out.println("------------------------------------------------------------");
+                System.out.println("Вказаний читач не отримував цього предмета.");
+                System.out.println("------------------------------------------------------------");
+            }
         } else {
             System.out.println("------------------------------------------------------------");
-            System.out.println("Бібліотекар не видавав цей предмет");
+            System.out.println("Предмет з ID " + item.getUniqueID() + " не було знайдено в бібліотеці.");
             System.out.println("------------------------------------------------------------");
+        }
+    }
+
+    public void showAvailableItems() {
+        System.out.println("Список доступних предметів:");
+        for (Item item : items) {
+            System.out.println(item);
+        }
+    }
+
+    public void showBorrowedItems() {
+        System.out.println("Список взятих предметів та їхніх читачів:");
+        for (Patron patron : patrons) {
+            for (Item borrowedItem : patron.getBorrowedItems()) {
+                System.out.println("Читач " + patron.getName() + " взяв " + borrowedItem);
+            }
         }
     }
 }

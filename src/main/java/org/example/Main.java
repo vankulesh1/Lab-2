@@ -58,7 +58,7 @@ public class Main {
 
     private static void addItemToLibrary(Library library, Scanner scanner) {
         System.out.println("------------------------------------------------------------");
-        System.out.println("Оберіть предмет, який хочете взяти:");
+        System.out.println("Оберіть предмет, з яким потрібно працювати (додати, чи видати):");
         System.out.println("1. Книга");
         System.out.println("2. DVD");
         System.out.println("------------------------------------------------------------");
